@@ -3,6 +3,7 @@ package main
 import (
 	"fmt"
 
+	"github.com/sineto/data-structs/binary_search"
 	"github.com/sineto/data-structs/fifo"
 	"github.com/sineto/data-structs/lifo"
 	"github.com/sineto/data-structs/linear_search"
@@ -33,9 +34,17 @@ func main() {
 		fmt.Println(queue.Items)
 	}
 
+	arr := []int{0, 1, 2, 3, 4, 5, 10, 1020, 1234}
+
 	// Linear Search
-	arr := []int{1, 2, 3, 4, 5, 10, 1020, 1234, 0}
 	fmt.Println(linear_search.Search(arr, 10))
 	fmt.Println(linear_search.Search(arr, 1))
 	fmt.Println(linear_search.Search(arr, 0))
+	fmt.Println(linear_search.Search(arr, 20))
+
+	// Binary Search
+	fmt.Println(binary_search.BinarySearch(arr, 10))
+	fmt.Println(binary_search.BinarySearch(arr, 1234))
+	fmt.Println(binary_search.BinarySearch(arr, 2))
+	fmt.Println(binary_search.BinarySearch(arr, 20))
 }
