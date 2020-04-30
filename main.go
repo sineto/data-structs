@@ -4,6 +4,7 @@ import (
 	"fmt"
 
 	"github.com/sineto/data-structs/binary_search"
+	"github.com/sineto/data-structs/bubble"
 	"github.com/sineto/data-structs/fifo"
 	"github.com/sineto/data-structs/lifo"
 	"github.com/sineto/data-structs/linear_search"
@@ -47,4 +48,9 @@ func main() {
 	fmt.Println(binary_search.BinarySearch(arr, 1234))
 	fmt.Println(binary_search.BinarySearch(arr, 2))
 	fmt.Println(binary_search.BinarySearch(arr, 20))
+
+	arr = []int{8, 10, 9, 4, 7, 6, 0, 1}
+	// Bubble Sort
+	fmt.Println(arr)
+	fmt.Println(bubble.BubbleSort(arr))
 }
